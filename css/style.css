@@ -51,6 +51,7 @@ img {
     height: 100%;
 }
 
+/* SIDEBAR HEAD */
 .sidebar-header, .sidebar-chat {
     height: 80px;
     display: flex;
@@ -60,6 +61,7 @@ img {
     border-right: 1px solid grey;
 }
 
+/* SIDEBAR IMG USER */
 .user img {
     width: 60px;
     border-radius: 50%;
@@ -67,6 +69,7 @@ img {
     margin-right: 10px;
 }
 
+/* ICON NOTATION */
 .box-icons{
     width: 88px;
     display: flex;
@@ -78,6 +81,7 @@ img {
     padding: 0 20px;
 }
 
+/* BLUE BAR NOTATION */
 .notations{
     height: 80px;
     padding: 14px 20px;
@@ -86,6 +90,7 @@ img {
     background-color: #8edafc;
 }
 
+/* BELL ICON */
 .sound{
     width: 60px;
     border-radius: 50%;
@@ -94,3 +99,17 @@ img {
     text-align: center;
     padding: 14px 0;
 }
+
+/* Scritta notifiche info */
+.notifier-info{
+    margin-left: 15px;
+}
+
+.notifier-info > p{
+    font-size: 15px;
+}
+.notifier-info > a, .last-access{
+    font-size: 12px;
+    color: #4f7485;
+}
+/* /Scritta notifiche info */
