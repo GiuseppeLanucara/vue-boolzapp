@@ -1,8 +1,36 @@
 /* RESET */
-
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+/* ASSEGNATA POSITION RELATIVE  */
+#app {
+    position: relative;
+}
+
+/* SFONDO PARTE COLORATA  */
+.background-head {
+    height: 120px;
+    background-color: #009789;
+}
+
+/* SFONDO PARTE GRIGIA */
+.background-main {
+    height: calc(100vh - 120px);
+    background-color: #d6dbd7;
+}
+
+.app-container {
+    width: 1100px;
+    height: 80%;
+    position: absolute;
+    border-radius: 5px;
+    margin: auto;
+    top: 40px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    background-color: #eaeaea;
+}
