@@ -4,6 +4,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap" rel="stylesheet">
     <!-- Link FontAwesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <!-- Link VUE -->
@@ -23,7 +26,35 @@
 
         <!-- CONTAINER DELL'APPLICAZIONE -->
         <div class="app-container">
-            
+            <aside class="sidebar">
+
+                <!-- .sidebar-header con informazioni utente e icone -->
+                <div class="sidebar-header">
+                    <div class="user">
+                        <img src="img/avatar_io.jpg" alt="mio avatar">
+                        <span>Sofia</span>
+                    </div>
+
+                    <div class="box-icons">
+                        <i class="fas fa-circle-notch fa-lg fa-fw"></i>
+                        <i class="fas fa-comment-alt fa-lg fa-fw"></i>
+                        <i class="fas fa-ellipsis-v fa-lg fa-fw"></i>
+                    </div>
+                </div>
+                <!-- /.sidebar-header -->
+
+                <div class="notations">
+                    <div class="sound">
+                        <i class="fas fa-bell-slash fa-2x fa-fw"></i>
+                    </div>
+
+                    <div class="notifier-info">
+                        <p class="info">Ricevi notifiche di nuovi messaggi</p>
+                        <a href="#">Attiva notifiche descktop</a>
+                    </div>
+                </div>
+
+            </aside>
 
         </div>
 
