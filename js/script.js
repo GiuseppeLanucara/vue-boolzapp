@@ -173,18 +173,19 @@ createApp({
         textToSend: ''
       }
     },
+    
     methods: {
         setSelectedContact(position){
             this.selectedContactIndex = position;
           
       },
 
-     
       
       sendMessage(){
         const chatMessages = this.contacts[this.selectedContactIndex].messages;
+        const now = dt.now().setLocale('it').toLocaleString(dt.DATETIME_SHORT_WITH_SECONDS);
         const newMessage = {
-            date: this.now,
+            date: now,
             message: this.textToSend,
             status: 'sent'
         };
@@ -201,8 +202,9 @@ createApp({
 
 
     function autoReply(appObject, contactIndex){
+        const now = dt.now().setLocale('it').toLocaleString(dt.DATETIME_SHORT_WITH_SECONDS);
         const replyMessage = {
-            date: this.now,
+            date: now,
             message: 'ok',
             status: 'received'
         };
