@@ -169,7 +169,7 @@ createApp({
         ],
 
         selectedContactIndex: 0,
-
+        textToSend: ''
       }
     },
     methods: {
@@ -177,6 +177,34 @@ createApp({
             this.selectedContactIndex = position;
           
       },
+
+     
       
+      sendMessage(){
+        const chatMessages = this.contacts[this.selectedContactIndex].messages;
+        const newMessage = {
+            // MANCA LA DATA
+            message: this.textToSend,
+            status: 'sent'
+        };
+        this.textToSend = '';
+        chatMessages.push(newMessage);
+
+        // Salvo l'attuale contatto selezionato
+        const actualContact = this.selectedContactIndex;
+        // Risposta ok dopo 1 secondo
+        setTimeout(autoReply.bind(null, this, actualContact), 1000);
+    }
 
     }}).mount("#app");
+
+
+    function autoReply(appObject, contactIndex){
+        const replyMessage = {
+            // MANCA LA DATA
+            message: 'ok',
+            status: 'received'
+        };
+       
+        appObject.contacts[contactIndex].messages.push(replyMessage);
+    }
