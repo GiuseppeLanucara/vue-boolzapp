@@ -81,7 +81,7 @@
                         <img :src="`./img/avatar${contacts[selectedContactIndex].avatar}.jpg`">
                         <div class="chat-info">
                             <div class="name">{{contacts[selectedContactIndex].name}}</div>
-                            
+                            <!-- MANCA LA DATA -->
                         </div>
                     </div>
 
@@ -96,7 +96,7 @@
                 <!-- .chat-main -->
                 <div class="chat-main">
                     <div v-for="message in contacts[selectedContactIndex].messages" :class="(message.status === 'sent') ? 'msg-send' : 'msg-received' ">
-                        <p>{{message.text}}</p>
+                        <p>{{message.message}}</p>
                         <div class="time-stamp">{{message.date}}</div>
                     </div>
                 </div>

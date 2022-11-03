@@ -168,8 +168,7 @@ createApp({
             }
         ],
 
-        selectedContactIndex: 0
-
+        selectedContactIndex: 0,
 
       }
     },
@@ -178,6 +177,6 @@ createApp({
             this.selectedContactIndex = position;
           
       },
-
+      
 
     }}).mount("#app");
