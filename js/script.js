@@ -1,4 +1,5 @@
 const {createApp} = Vue;
+const dt = luxon.DateTime;
 
 createApp({
     data() {
@@ -183,7 +184,7 @@ createApp({
       sendMessage(){
         const chatMessages = this.contacts[this.selectedContactIndex].messages;
         const newMessage = {
-            // MANCA LA DATA
+            date: this.now,
             message: this.textToSend,
             status: 'sent'
         };
@@ -201,7 +202,7 @@ createApp({
 
     function autoReply(appObject, contactIndex){
         const replyMessage = {
-            // MANCA LA DATA
+            date: this.now,
             message: 'ok',
             status: 'received'
         };
