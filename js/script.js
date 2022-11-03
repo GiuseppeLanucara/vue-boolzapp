@@ -3,6 +3,7 @@ const {createApp} = Vue;
 createApp({
     data() {
       return {
+       
         contacts: [
             {
                 name: 'Michele',
@@ -165,13 +166,17 @@ createApp({
                     }
                 ],
             }
-        ]
+        ],
+
+        activeContact: 0
 
 
       }
     },
     methods: {
-
+        setSelectedContact(position){
+            this.activeContact = position;
+        }
           
       },
 
