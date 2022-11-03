@@ -168,16 +168,16 @@ createApp({
             }
         ],
 
-        activeContact: 0
+        selectedContactIndex: 0
 
 
       }
     },
     methods: {
         setSelectedContact(position){
-            this.activeContact = position;
-        }
+            this.selectedContactIndex = position;
           
       },
 
-    }).mount("#app");
+
+    }}).mount("#app");

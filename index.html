@@ -60,10 +60,10 @@
 
                 <div class="contact-list">
                     <ul>
-                        <li v-for="(contact, index) in contacts"  >
+                        <li v-for="(contact, index) in contacts" @click="setSelectedContact(index)" >
                             <img :src="'./img/avatar' + contact.avatar + '.jpg' ">
                             <div class="contact-info">
-                                <div class="name">{{contacts[activeContact++].name}}</div>
+                                <div class="name">{{contact.name}}</div>
                                 <div class="time-stamp"></div>
                                 <div class="last-message"></div>
                             </div>
@@ -78,10 +78,10 @@
                 <!-- .chat-header -->
                 <div class="chat-header">
                     <div class="user">
-                        <img src="./img/avatar_1.jpg" alt="mio avatar">
+                        <img :src="`./img/avatar${contacts[selectedContactIndex].avatar}.jpg`">
                         <div class="chat-info">
-                            <div class="name">Michele</div>
-                            <div class="last-access">Ultimo accesso oggi alle</div>
+                            <div class="name">{{contacts[selectedContactIndex].name}}</div>
+                            
                         </div>
                     </div>
 
@@ -95,19 +95,9 @@
 
                 <!-- .chat-main -->
                 <div class="chat-main">
-                    <div class="msg-send">
-                        <p>Messaggio breve</p>
-                        <div class="time-stamp">10/01/2020 15:30:54</div>
-                    </div>
-
-                    <div class="msg-send">
-                        <p>Prova messaggio lungo molto lungo molto lungo inviato</p>
-                        <div class="time-stamp">10/01/2020 15:30:54</div>
-                    </div>
-
-                    <div class="msg-received">
-                        <p>Prova messaggio ricevuto</p>
-                        <div class="time-stamp">10/01/2020 15:32:02</div>
+                    <div v-for="message in contacts[selectedContactIndex].messages" :class="(message.status === 'sent') ? 'msg-send' : 'msg-received' ">
+                        <p>{{message.text}}</p>
+                        <div class="time-stamp">{{message.date}}</div>
                     </div>
                 </div>
                 <!-- /.chat-main -->
