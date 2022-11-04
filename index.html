@@ -62,7 +62,7 @@
 
                 <div class="contact-list">
                     <ul>
-                        <li v-for="(contact, index) in contacts"  v-show="contact.visible" @click="setSelectedContact(index)" >
+                        <li v-for="(contact, index) in contacts" v-show="contact.visible" @click="setSelectedContact(index)" >
                             <img :src="'./img/avatar' + contact.avatar + '.jpg' ">
                             <div class="contact-info">
                                 <div class="name">{{contact.name}}</div>
