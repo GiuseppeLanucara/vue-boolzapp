@@ -170,7 +170,8 @@ createApp({
         ],
 
         selectedContactIndex: 0,
-        textToSend: ''
+        textToSend: '',
+        searchContact: ''
       }
     },
     
@@ -196,7 +197,24 @@ createApp({
         const actualContact = this.selectedContactIndex;
         // Risposta ok dopo 1 secondo
         setTimeout(autoReply.bind(null, this, actualContact), 1000);
+    },
+
+    search(){
+        if(this.searchContact === ''){
+            this.contacts.forEach(contact => contact.visible = true);
+        } else {
+            const stringToFind = this.searchContact.toLowerCase();
+            this.contacts.forEach(contact => {
+                if(contact.name.toLowerCase().includes(stringToFind)){
+                    contact.visible = true;
+                } else {
+                    contact.visible = false;
+                }
+            });
+        }
     }
+
+    
 
     }}).mount("#app");
 
